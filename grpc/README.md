@@ -1,4 +1,4 @@
-# golang-grcp-example
+# grpc
 
 ## Compiling Protobuf
 
