@@ -1,0 +1,39 @@
+syntax = "proto3";
+package pb;
+option go_package ="internal/pb";
+
+import "google/protobuf/empty.proto";
+
+message Type {
+  string id = 1;
+  string name = 2;
+}
+
+message Entity {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  Type type = 4;
+}
+
+message CreateEntityRequest {
+  Entity entity = 1;
+}
+
+message CreateEntityResponse {
+  Entity entity = 1;
+}
+
+message ListEntitiesRequest {
+}
+
+message ListEntitiesResponse {
+  repeated Entity entities = 1;
+}
+
+service EntityService {
+  rpc Health(google.protobuf.Empty) returns (google.protobuf.Empty)  {}
+  rpc CreateEntity(CreateEntityRequest) returns (CreateEntityResponse)  {}
+  rpc CreateEntityStreamBidirectional(stream CreateEntityRequest) returns (stream CreateEntityResponse)  {}
+  rpc ListEntities(ListEntitiesRequest) returns (ListEntitiesResponse)  {}
+}
