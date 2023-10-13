@@ -4,7 +4,8 @@ import (
 	"log"
 	"net"
 
-	"example.com/internal/pb"
+	"goexpertgrpc/internal/pb"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

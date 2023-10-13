@@ -1,4 +1,4 @@
-module example.com
+module goexpertgrpc
 
 go 1.17
 

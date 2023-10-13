@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"example.com/internal/pb"
+	"goexpertgrpc/internal/pb"
 )
 
 type EntityService struct {

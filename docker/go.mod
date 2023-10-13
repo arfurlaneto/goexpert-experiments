@@ -1,3 +1,3 @@
-module example.com
+module goexpertdocker
 
 go 1.17
