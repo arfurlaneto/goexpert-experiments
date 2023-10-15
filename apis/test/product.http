@@ -1,0 +1,34 @@
+POST http://localhost:8080/products  HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZGY1MDcxNi02ZDVmLTQ0MmUtYmIzMy1iNWYyNjQ4OGRiYjMifQ.Ca6Smrr7QiTaqoDTW2kOTLn4o9Qc_WNaMx2qEeWjgME
+Content-Type: application/json
+
+{
+  "name": "My Product",
+  "price": 100
+}
+
+###
+
+GET http://localhost:8080/products?page=1&limit=3 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZGY1MDcxNi02ZDVmLTQ0MmUtYmIzMy1iNWYyNjQ4OGRiYjMifQ.Ca6Smrr7QiTaqoDTW2kOTLn4o9Qc_WNaMx2qEeWjgME
+
+###
+
+GET http://localhost:8080/products/13c1d58f-b84c-4bac-a4f0-d5a53de5fc24 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZGY1MDcxNi02ZDVmLTQ0MmUtYmIzMy1iNWYyNjQ4OGRiYjMifQ.Ca6Smrr7QiTaqoDTW2kOTLn4o9Qc_WNaMx2qEeWjgME
+
+###
+
+PUT http://localhost:8080/products/13c1d58f-b84c-4bac-a4f0-d5a53de5fc24  HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZGY1MDcxNi02ZDVmLTQ0MmUtYmIzMy1iNWYyNjQ4OGRiYjMifQ.Ca6Smrr7QiTaqoDTW2kOTLn4o9Qc_WNaMx2qEeWjgME
+Content-Type: application/json
+
+{
+  "name": "My Product (Updated)",
+  "price": 200
+}
+
+###
+
+DELETE http://localhost:8080/products/13c1d58f-b84c-4bac-a4f0-d5a53de5fc24  HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5ZGY1MDcxNi02ZDVmLTQ0MmUtYmIzMy1iNWYyNjQ4OGRiYjMifQ.Ca6Smrr7QiTaqoDTW2kOTLn4o9Qc_WNaMx2qEeWjgME
